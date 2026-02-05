@@ -1,0 +1,11 @@
+# Not part of the runtime library; kept in git for provenance.
+artifacts/
+
+# Repo-only / dev tooling
+.github/
+.husky/
+tests/
+renovate.json
+tsconfig.build.json
+
+.DS_Store
