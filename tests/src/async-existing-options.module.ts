@@ -4,7 +4,7 @@ import {
   PostgresModule,
   PostgresModuleOptions,
   PostgresOptionsFactory,
-} from '../../lib';
+} from '../..';
 
 class ConfigService implements PostgresOptionsFactory {
   createPostgresOptions(): PostgresModuleOptions {

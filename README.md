@@ -32,18 +32,18 @@ First install the module via `yarn` or `npm` or `pnpm` and do not forget to inst
 
 
 ```bash
-    $ npm i --save nest-postgres pg
+    $ npm i --save @ameno/nest-postgres pg
 ```
 or
 
 ```bash
-    $ yarn add nest-postgres pg
+    $ yarn add @ameno/nest-postgres pg
 ```
 
 or
 
 ```bash
-    $ pnpm add nest-postgres pg
+    $ pnpm add @ameno/nest-postgres pg
 ```
 
 ## Table of Contents
@@ -103,7 +103,7 @@ UsersService:
 
 ```typescript
 import { Client } from 'pg';
-import { InjectClient } from 'nest-postgres';
+import { InjectClient } from '@ameno/nest-postgres';
 
 @Injectable()
 export class UsersService {
@@ -169,7 +169,7 @@ PostService:
 
 ```typescript
 import { Client } from 'pg';
-import { InjectConnection } from 'nest-postgres';
+import { InjectConnection } from '@ameno/nest-postgres';
 import { CreatePostDto } from './dto/create-post.dto';
 import { Post } from './interfaces/post.interface';
 
@@ -203,7 +203,7 @@ UsersService:
 
 ```typescript
 import { Client } from 'pg';
-import { InjectConnection } from 'nest-postgres';
+import { InjectConnection } from '@ameno/nest-postgres';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './interfaces/user.interface';
 
