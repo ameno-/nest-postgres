@@ -39,14 +39,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Start Docker-Compose
-        run: cd tests && docker-compose up -d
-      - name: Install npm
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - name: Start Docker Compose
+        run: cd tests && docker compose up -d
+      - name: Wait for Postgres
+        run: |
+          cd tests
+          for i in {1..30}; do
+            if docker compose exec -T db pg_isready -U postgres; then
+              exit 0
+            fi
+            sleep 1
+          done
+          docker compose logs db
+          exit 1
+      - run: npm ci
       - name: Run tests e2e
         run: npm run test:e2e
       - name: Stop Docker-Compose
-        run: cd tests && docker-compose down -v
+        if: always()
+        run: cd tests && docker compose down -v

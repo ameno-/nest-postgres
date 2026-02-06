@@ -1,7 +1,7 @@
 import { INestApplication, HttpStatus } from '@nestjs/common';
 import { TestingModule, Test } from '@nestjs/testing';
 import { UsersModule } from '../src/apps/app-postgres/app/users/users.module';
-import * as request from 'supertest';
+import request from 'supertest';
 import { AppModule } from '../src/apps/app-postgres/app/app.module';
 
 describe('[Feature] Users - /users', () => {

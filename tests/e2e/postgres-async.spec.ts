@@ -1,7 +1,7 @@
 import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { AsyncApplicationModule } from '../src/app-async.module';
-import * as request from 'supertest';
+import request from 'supertest';
 
 describe('Postgres (async configuration)', () => {
   let app: INestApplication;

@@ -3,7 +3,7 @@ import {
   PostgresOptionsFactory,
   PostgresModuleOptions,
   PostgresModule,
-} from '../../lib';
+} from '../..';
 import { UsersModule } from './apps/app-postgres/app/users/users.module';
 
 class ConfigService implements PostgresOptionsFactory {

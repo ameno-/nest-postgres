@@ -1,5 +1,5 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { PostgresModule } from '../../lib';
+import { PostgresModule } from '../..';
 
 @Module({})
 export class DatabaseModule {

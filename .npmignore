@@ -7,5 +7,7 @@ artifacts/
 tests/
 renovate.json
 tsconfig.build.json
+tsconfig.json
+package-lock.json
 
 .DS_Store
